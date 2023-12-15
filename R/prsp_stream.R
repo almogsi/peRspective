@@ -113,9 +113,9 @@ prsp_stream <- function(.data,
     stop(stringr::str_glue("No Model type provided in score_model.\n\nShould be one of the following:\n\n{peRspective::prsp_models %>% glue::glue_collapse('\n')}"))
   }
 
-  if (!all(prsp_params$score_model %in% prsp_models | prsp_params$score_model %in% prsp_exp_models)) {
-    stop(stringr::str_glue("Invalid Model type provided.\n\nShould be one of the following:\n\n{peRspective::prsp_models %>% glue::glue_collapse('\n')}"))
-  }
+  #if (!all(prsp_params$score_model %in% prsp_models | prsp_params$score_model %in% prsp_exp_models)) {
+  #  stop(stringr::str_glue("Invalid Model type provided.\n\nShould be one of the following:\n\n{peRspective::prsp_models %>% glue::glue_collapse('\n')}"))
+  #}
   
   ## loop over prsp_score
   final_text <- .data %>%
